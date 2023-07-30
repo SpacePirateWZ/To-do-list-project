@@ -14,7 +14,7 @@ body {
     background: url(glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg) no-repeat center center/cover;
 }
 
-.task-adder {
+#add-task-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,13 +24,17 @@ body {
     width: 700px;
     height: 100px;
     border: 2px solid #802e08;
+    box-shadow: 0 0 5px;
+    margin-bottom: 20px;
 }
 
 input {
     padding: 20px;
 }
 
-.text-box {
+#text-box {
+    flex: 5;
+    margin-right: 10px;
     width: 500px;
     height: 40px;
     border-radius: 15px;
@@ -39,15 +43,76 @@ input {
     font-size: 20px
 }
 
-.add-btn {
+#add-btn {
+    flex: 1;
     width: 100px;
     height: 40px;
     border-radius: 15px;
     border: 2px solid #a16c54;
     background-color: white;
-    font-size: 30px
+    font-size: 20px;
+    transition: .3s;
+    color: burlywood;
+    cursor: pointer;
 }
 
-.add-btn:hover {
+i {
+    padding: 2px;
+}
+
+#add-btn:hover {
     background-color: #f2eaae;
+    color: #a16c54;
+}
+
+/* styling for task container and its items */
+
+.task {
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task li {
+    list-style: none;
+    flex: 4;
+    padding: 5px;
+    font-size: 1.3rem;
+    margin: 10px;
+    text-align: left;
+}
+
+.task button {
+    flex: 1;
+    border-radius: 15px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.task .checkTask {
+    color: brown;
+    margin-right: 5px;
+    border: #a16c54 solid 2px;
+    font-size: 1.5rem;
+}
+
+.task .deleteTask {
+    color: darkred;
+    border: maroon solid 2px;
+    font-size: 1.5rem;
+}
+
+.task .checkTask:hover {
+    background-color: wheat;
+    color: orange;
+}
+
+.task .deleteTask:hover {
+    background-color: lightcoral;
+    color: rebeccapurple;
 }
