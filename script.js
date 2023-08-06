@@ -29,21 +29,35 @@ addBtn.addEventListener('click',function(){
         taskContainer.appendChild(task)
     } 
 
-    inputText.value = "";
+    inputText.value = ""; // to reset the default text value back to blank
 
     checkbtn.addEventListener('click', function(){
-        checkbtn.parentElement.style.textDecoration = "line-through"
+        const taskDiv = checkbtn.parentElement;
+        if (taskDiv.style.textDecoration === "none") {
+            taskDiv.style.textDecoration = "line-through";
+        }
+        else {
+            taskDiv.style.textDecoration = "none";
+        }
     });
 
     deletebtn.addEventListener('click', function(e){
         let target = e.target;
-        target.parentElement.parentElement.remove();
+        if (target.tagName === "I") {
+            target.parentElement.parentElement.remove();
+        }
+        else {
+            target.parentElement.remove();
+        }
     });
     
 });
 
 
 // 2 bugs to fix:
-// 1) deleting task will delete all if we didnt click on the <i>
-// 2) after deleting task, if we try to add the task, the task wont be added
+// 1) deleting task will delete all if we didnt click on the <i> *done
+// 2) after deleting task, if we try to add the task, the task wont be added *fixed when loaded in live-server
+
+// to add one more function such that re-clicking the checkbtn, will remove the strikethrough *done
+
 

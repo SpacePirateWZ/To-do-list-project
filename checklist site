@@ -1,0 +1,39 @@
+checklist 
+1 - able to enter task and plus button
+2 - tick button to cross over entered task
+3 - delete button to remove the selected task
+
+document.getELementById()
+addEventListener()
+e.target
+appendChild()
+createElement()
+parentElement()
+remove()
+classList_add()
+
+******************
+
+add input type = text in center
+add button for plus
+
+* hover effect on text field & buttons
+
+addEventListener to plus button
+> with function to createElement('div') with certain class name
+> set css properties for that class beforehand
+> contain the following childElement
+--> a span to container the text entered
+--> a tick button
+--> a delete button
+
+addEventListener to tick button
+> with function to cross over entered task
+
+addEventListener to plus button
+> with function to remove a particular div
+
+2 bugs to fix:
+1) deleting task will delete all if we didnt click on the <i>
+2) after deleting task, if we try to add the task, the task wont be added
+
